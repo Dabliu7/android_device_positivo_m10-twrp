@@ -1,1 +1,1 @@
-# android_device_positivo_m10-twrp
+# POSITIVO M10 4G PRO X
