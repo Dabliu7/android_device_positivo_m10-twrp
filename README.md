@@ -1,0 +1,1 @@
+# android_device_positivo_m10-twrp
