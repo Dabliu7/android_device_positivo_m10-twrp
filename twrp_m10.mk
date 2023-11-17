@@ -10,21 +10,21 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common Omni stuff.
+# Inherit some common twrp stuff.
 $(call inherit-product, vendor/twrp/config/common.mk)
 
 # Inherit from java device
-$(call inherit-product, device/motorola/java/device.mk)
+$(call inherit-product, device/positivo/m10/device.mk)
 
-PRODUCT_DEVICE := java
-PRODUCT_NAME := twrp_java
-PRODUCT_BRAND := motorola
-PRODUCT_MODEL := moto g(20)
-PRODUCT_MANUFACTURER := motorola
+PRODUCT_DEVICE := m10
+PRODUCT_NAME := twrp_m10
+PRODUCT_BRAND := positivo
+PRODUCT_MODEL := m10 4g pro x
+PRODUCT_MANUFACTURER := positivo
 
-PRODUCT_GMS_CLIENTID_BASE := android-motorola
+PRODUCT_GMS_CLIENTID_BASE := android-positivo
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="p352_Natv-user 11 RTA31.68-36 36 release-keys"
+    PRIVATE_BUILD_DESC="T2040-user 10 QP1A.190711.020 URFR2021070302 release-keys"
 
-BUILD_FINGERPRINT := motorola/java_retail/java:11/RTA31.68-36/36:user/release-keys
+BUILD_FINGERPRINT := positivo/M10/T2040:10/QP1A.190711.020/URFR2021070302:user/release-keys
