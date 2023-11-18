@@ -1,6 +1,6 @@
-ifneq ($(filter $$DEVICE$$,$(TARGET_DEVICE)),)
+ifneq ($(filter t2040, $(TARGET_DEVICE)),)
 
-LOCAL_PATH := device/positivo/t2040
+LOCAL_PATH := $(call my-dir)
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
