@@ -14,7 +14,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, vendor/twrp/config/common.mk)
 
 # Inherit from t2040 device
-$(call inherit-product, device/positivo/m10/device.mk)
+$(call inherit-product, device/positivo/t2040/device.mk)
 
 PRODUCT_DEVICE := t2040
 PRODUCT_NAME := twrp_m10
