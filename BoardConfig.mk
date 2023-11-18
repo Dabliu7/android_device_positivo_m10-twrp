@@ -7,6 +7,10 @@
 
 DEVICE_PATH := device/motorola/t2040
 
+# Bootloader
+TARGET_BOOTLOADER_BOARD_NAME := sp9863a_1h10_32b
+TARGET_NO_BOOTLOADER := true
+
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
 
@@ -49,10 +53,6 @@ TARGET_USES_64_BIT_BINDER := true
 
 # APEX
 DEXPREOPT_GENERATE_APEX_IMAGE := true
-
-# Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := p352
-TARGET_NO_BOOTLOADER := true
 
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/twrp.fstab
