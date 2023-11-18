@@ -5,7 +5,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/motorola/java
+DEVICE_PATH := device/motorola/t2040
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
