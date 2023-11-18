@@ -14,9 +14,6 @@ TARGET_NO_BOOTLOADER := true
 # Platform
 TARGET_BOARD_PLATFORM := sp9863a
 
-# For building with minimal manifest
-ALLOW_MISSING_DEPENDENCIES := true
-
 # A/B
 AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS += \
@@ -77,8 +74,8 @@ BOARD_MKBOOTIMG_ARGS += --ramdisk_offset $(BOARD_RAMDISK_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
-TARGET_KERNEL_CONFIG := java_defconfig
-TARGET_KERNEL_SOURCE := kernel/motorola/java
+TARGET_KERNEL_CONFIG := t2040_defconfig
+TARGET_KERNEL_SOURCE := kernel/positivo/t2040
 
 # Kernel - prebuilt
 TARGET_FORCE_PREBUILT_KERNEL := true
