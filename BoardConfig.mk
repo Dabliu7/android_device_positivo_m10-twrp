@@ -11,6 +11,9 @@ DEVICE_PATH := device/motorola/t2040
 TARGET_BOOTLOADER_BOARD_NAME := sp9863a_1h10_32b
 TARGET_NO_BOOTLOADER := true
 
+# Platform
+TARGET_BOARD_PLATFORM := sp9863a
+
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
 
@@ -128,9 +131,6 @@ TW_USE_FSCRYPT_POLICY := 1
 # Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
-
-# Platform
-TARGET_BOARD_PLATFORM := ums512
 
 # Recovery
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
