@@ -5,7 +5,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/motorola/t2040
+DEVICE_PATH := device/positivo/t2040
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := sp9863a_1h10_32b
