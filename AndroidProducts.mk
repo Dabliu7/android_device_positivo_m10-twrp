@@ -1,7 +1,7 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/omni_t2040.mk
+    $(LOCAL_DIR)/twrp_t2040.mk
 
 COMMON_LUNCH_CHOICES := \
-    omni_t2040-user \
-    omni_t2040-userdebug \
-    omni_t2040-eng
+    twrp_t2040-user \
+    twrp_t2040-userdebug \
+    twrp_t2040-eng
