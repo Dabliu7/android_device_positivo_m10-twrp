@@ -14,6 +14,7 @@ Rode a partir da raiz do código-fonte do TWRP:
 import argparse
 import hashlib
 import os
+import shutil
 import struct
 import subprocess
 import sys
@@ -70,6 +71,8 @@ def main():
     parser.add_argument('--out', required=True, help='arquivo de saída')
     parser.add_argument('--avbtool', default='external/avb/avbtool')
     parser.add_argument('--key', default='external/avb/test/data/testkey_rsa4096.pem')
+    parser.add_argument('--python', default=shutil.which('python2') or sys.executable,
+                        help='interpretador usado para rodar o avbtool (o do twrp-11 exige Python 2)')
     parser.add_argument('--resign', default='recovery',
                         help='partições que passam a usar a chave de teste, separadas por vírgula')
     args = parser.parse_args()
@@ -90,9 +93,9 @@ def main():
 
     with tempfile.TemporaryDirectory() as tmp:
         test_pub = os.path.join(tmp, 'testkey.bin')
-        subprocess.check_call([sys.executable, args.avbtool, 'extract_public_key',
+        subprocess.check_call([args.python, args.avbtool, 'extract_public_key',
                                '--key', args.key, '--output', test_pub])
-        cmd = [sys.executable, args.avbtool, 'make_vbmeta_image',
+        cmd = [args.python, args.avbtool, 'make_vbmeta_image',
                '--key', args.key, '--algorithm', 'SHA256_RSA4096', '--flags', '0',
                '--padding_size', str(VBMETA_PADDED_SIZE)]
         for name, location, key in chains:
