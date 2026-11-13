@@ -8,9 +8,9 @@ $(call inherit-product, vendor/omni/config/common.mk)
 $(call inherit-product, device/positivo/t2040/device.mk)
 
 PRODUCT_DEVICE := t2040
-PRODUCT_NAME :=omni_m10
+PRODUCT_NAME := omni_t2040
 PRODUCT_BRAND := positivo
-PRODUCT_MODEL := m10 4g pro x
+PRODUCT_MODEL := M10 4G PRO X
 PRODUCT_MANUFACTURER := positivo
 
 PRODUCT_BUILD_PROP_OVERRIDES += \

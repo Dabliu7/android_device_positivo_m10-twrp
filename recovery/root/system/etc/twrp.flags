@@ -1,0 +1,11 @@
+# Flags extras do TWRP (o layout das partições fica em recovery.fstab)
+/boot           emmc    /dev/block/platform/soc/soc:ap-ahb/20600000.sdio/by-name/boot       flags=display="Boot";backup=1;flashimg=1
+/recovery       emmc    /dev/block/platform/soc/soc:ap-ahb/20600000.sdio/by-name/recovery   flags=display="Recovery";backup=1;flashimg=1
+/dtbo           emmc    /dev/block/platform/soc/soc:ap-ahb/20600000.sdio/by-name/dtbo       flags=display="DTBO";backup=1;flashimg=1
+/vbmeta         emmc    /dev/block/platform/soc/soc:ap-ahb/20600000.sdio/by-name/vbmeta     flags=display="VBMeta";backup=1;flashimg=1
+/logo           emmc    /dev/block/platform/soc/soc:ap-ahb/20600000.sdio/by-name/logo       flags=display="Logo";backup=1;flashimg=1
+/persist        emmc    /dev/block/platform/soc/soc:ap-ahb/20600000.sdio/by-name/persist    flags=display="Persist";backup=1
+
+# Armazenamento removível
+/external_sd    auto    /dev/block/mmcblk1p1    /dev/block/mmcblk1    flags=display="Micro SD";storage;wipeingui;removable
+/usb-otg        auto    /dev/block/sda1         /dev/block/sda        flags=display="USB OTG";storage;wipeingui;removable
