@@ -24,9 +24,6 @@ TARGET_CPU_VARIANT_RUNTIME := cortex-a55
 
 TARGET_USES_64_BIT_BINDER := true
 
-# APEX
-DEXPREOPT_GENERATE_APEX_IMAGE := true
-
 # Kernel
 BOARD_BOOTIMG_HEADER_VERSION := 2
 BOARD_KERNEL_BASE := 0x00000000
@@ -104,8 +101,7 @@ TW_INCLUDE_REPACKTOOLS := true
 TW_INCLUDE_FASTBOOTD := true
 RECOVERY_SDCARD_ON_DATA := true
 
-# Kernel module loading
-TW_LOAD_VENDOR_MODULES := "oreo_ili9882n.ko focaltech-FT5x46.ko incrementalfs.ko kheaders.ko trace_irqsoff_bytedancy.ko trace_noschedule_bytedancy.ko trace_runqlat_bytedancy.ko"
-
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
+BUILD_BROKEN_DUP_RULES := true
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true

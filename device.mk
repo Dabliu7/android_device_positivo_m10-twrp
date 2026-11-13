@@ -1,3 +1,6 @@
+# API level do firmware de fábrica (Android 10)
+PRODUCT_SHIPPING_API_LEVEL := 29
+
 # Fastbootd
 PRODUCT_PACKAGES += \
     fastbootd \
